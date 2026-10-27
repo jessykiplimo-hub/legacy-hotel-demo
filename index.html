@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12271f">
+<title>The Legacy | Hotel & Conference Centre</title>
+<meta name="description" content="Discover a hotel website concept for The Legacy Hotel & Conference Centre in Nakuru, Kenya. Explore stays, dining and conference enquiries.">
+<style>
+:root {
+  --green: #173b2d;
+  --deep: #10271f;
+  --gold: #d6b477;
+  --cream: #f7f4ed;
+  --ink: #222b25;
+  --muted: #72796f;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1120px, 90%); margin: auto; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--deep);
+  color: white;
+}
+nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.brand {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+.brand small {
+  display: block;
+  font: 9px Arial, sans-serif;
+  letter-spacing: 3px;
+  color: var(--gold);
+}
+.links { display: flex; gap: 22px; font-size: 13px; }
+.links a:hover { color: var(--gold); }
+.btn {
+  display: inline-block;
+  border: 0;
+  padding: 13px 19px;
+  background: var(--gold);
+  color: var(--deep);
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+}
+.btn:hover { background: #e8cf9e; }
+.hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(90deg, #10271ff2 0%, #10271fc9 45%, #10271f30 100%),
+    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+.hero-content { max-width: 670px; padding: 90px 0; }
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+h1 {
+  font: 400 clamp(44px, 7vw, 76px)/1.08 Georgia, serif;
+  margin: 20px 0;
+}
+h1 span { color: var(--gold); }
+.hero p { max-width: 490px; color: #e4e8e2; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.outline {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 1px solid #ffffff9c;
+  color: white;
+  font-size: 13px;
+}
+.notice {
+  background: #f0e5cc;
+  padding: 11px 5%;
+  text-align: center;
+  font-size: 12px;
+  color: #4e422e;
+}
+section { padding: 76px 0; }
+.section-head { max-width: 650px; margin-bottom: 32px; }
+h2 {
+  font: 400 clamp(31px, 5vw, 47px)/1.15 Georgia, serif;
+  color: var(--green);
+  margin: 12px 0;
+}
+.section-head p, .muted { color: var(--muted); }
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.intro-image {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  display: block;
+}
+.intro-copy p { color: var(--muted); }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  background: white;
+  border: 1px solid #e8e4d9;
+}
+.card img {
+  width: 100%;
+  height: 205px;
+  display: block;
+  object-fit: cover;
+}
+.card-copy { padding: 22px; }
+.card h3 { font: 400 24px Georgia, serif; color: var(--green); margin: 0 0 8px; }
+.card p { color: var(--muted); font-size: 14px; }
+.dark-section { background: var(--green); color: white; }
+.dark-section h2 { color: white; }
+.dark-section .section-head p { color: #d0dbd2; }
+.feature {
+  border-top: 1px solid #ffffff40;
+  padding: 22px 0;
+}
+.feature h3 { color: var(--gold); font: 400 22px Georgia, serif; margin: 0 0 5px; }
+.feature p { color: #d0dbd2; margin: 0; font-size: 14px; }
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+.enquiry {
+  max-width: 720px;
+  margin: auto;
+  background: white;
+  padding: clamp(22px, 5vw, 45px);
+  border: 1px solid #e8e4d9;
+}
+form { display: grid; gap: 15px; margin-top: 25px; }
+label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; }
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d9d8cf;
+  border-radius: 0;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+textarea { min-height: 100px; resize: vertical; }
+footer { background: var(--deep); color: white; padding: 35px 0; }
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+footer p { color: #c3cec5; font-size: 12px; }
+.small { font-size: 11px; color: var(--muted); }
+@media(max-width:750px) {
+  .links { display: none; }
+  .hero { min-height: 510px; }
+  section { padding: 55px 0; }
+  .intro-grid, .cards, .features { grid-template-columns: 1fr; }
+  .intro-image { height: 270px; }
+  .card img { height: 230px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="#home" class="brand">
+      THE LEGACY
+      <small>HOTEL & CONFERENCE CENTRE</small>
+    </a>
+    <div class="links">
+      <a href="#about">Our Story</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#meetings">Meetings</a>
+    </div>
+    <a class="btn" href="#enquiry">MAKE AN ENQUIRY</a>
+  </nav>
+</header>
+
+<div class="notice">
+  WEBSITE CONCEPT · Sample content and imagery · Not an official hotel website
+</div>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="eyebrow">Your Nakuru stay, reimagined</div>
+      <h1>A place to<br>pause. <span>A reason</span><br>to return.</h1>
+      <p>A refined hospitality website concept for guests planning a stay,
+      a meal, or their next gathering in Nakuru, Kenya.</p>
+      <div class="actions">
+        <a class="btn" href="#enquiry">PLAN YOUR VISIT ↗</a>
+        <a class="outline" href="#experiences">EXPLORE THE EXPERIENCE</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap intro-grid">
+    <div class="intro-copy">
+      <div class="eyebrow">Welcome to The Legacy</div>
+      <h2>Hospitality, with a sense of place.</h2>
+      <p>This concept presents the hotel through elegant design,
+      clear information and a simple path for guests to make enquiries.</p>
+      <p>Whether you are planning a getaway or organising a gathering,
+      a good hotel website should make your next step effortless.</p>
+      <a class="btn" href="#enquiry">GET IN TOUCH</a>
+    </div>
+    <img class="intro-image"
+      src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85"
+      alt="Elegant hotel room inspiration" loading="lazy">
+  </div>
+</section>
+
+<section id="experiences">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Discover the possibilities</div>
+      <h2>Your stay, your way.</h2>
+      <p>Dedicated sections help visitors find the information
+      they need without searching through pages of text.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80"
+          alt="Comfortable hotel room inspiration" loading="lazy">
+        <div class="card-copy">
+          <h3>Stay</h3>
+          <p>Showcase room types, amenities, verified photographs
+          and current rates in one clear place.</p>
+          <a class="eyebrow" href="#enquiry">ASK ABOUT ROOMS ↗</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80"
+          alt="Restaurant dining inspiration" loading="lazy">
+        <div class="card-copy">
+          <h3>Dine</h3>
+          <p>Present dining options, menus, service hours and
+          food photography once confirmed by the hotel.</p>
+          <a class="eyebrow" href="#enquiry">ASK ABOUT DINING ↗</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80"
+          alt="Conference and business event inspiration" loading="lazy">
+        <div class="card-copy">
+          <h3>Gather</h3>
+          <p>Help organisations enquire about meeting spaces,
+          events, guest capacity and available packages.</p>
+          <a class="eyebrow" href="#meetings">EXPLORE MEETINGS ↗</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section" id="meetings">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Business & occasions</div>
+      <h2>Make room for what matters.</h2>
+      <p>A dedicated meetings section can turn website visits into
+      useful enquiries from businesses and event organisers.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <h3>Corporate Meetings</h3>
+        <p>Present meeting options, equipment and packages after verification.</p>
+      </div>
+      <div class="feature">
+        <h3>Special Occasions</h3>
+        <p>Showcase suitable event spaces and celebration services, if available.</p>
+      </div>
+      <div class="feature">
+        <h3>Group Stays</h3>
+        <p>Invite organisers to enquire about group accommodation and arrangements.</p>
+      </div>
+    </div>
+    <p style="margin-top:30px">
+      <a class="btn" href="#enquiry">ENQUIRE ABOUT AN EVENT ↗</a>
+    </p>
+  </div>
+</section>
+
+<section id="enquiry">
+  <div class="wrap">
+    <div class="enquiry">
+      <div class="eyebrow">Start planning</div>
+      <h2>Let's plan your visit.</h2>
+      <p class="muted">Send a sample enquiry below. This demonstration
+      form is not connected to the hotel's booking system.</p>
+      <form id="booking-form">
+        <div>
+          <label for="guest">Your name</label>
+          <input id="guest" name="guest" placeholder="Enter your name" required>
+        </div>
+        <div>
+          <label for="type">What are you enquiring about?</label>
+          <select id="type" name="type" required>
+            <option value="">Choose an enquiry</option>
+            <option>Room availability</option>
+            <option>Dining</option>
+            <option>Conference or meeting</option>
+            <option>Event or group booking</option>
+            <option>General enquiry</option>
+          </select>
+        </div>
+        <div>
+          <label for="date">Preferred date</label>
+          <input id="date" name="date" type="date">
+        </div>
+        <div>
+          <label for="details">Additional details</label>
+          <textarea id="details" name="details" placeholder="Tell us what you need"></textarea>
+        </div>
+        <button class="btn" type="submit">PREVIEW ENQUIRY</button>
+        <p id="form-message" class="small" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div>
+      <div class="brand">THE LEGACY</div>
+      <p>Hotel & Conference Centre · Nakuru, Kenya</p>
+    </div>
+    <p>Demo website concept · Created for presentation</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("booking-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("form-message").textContent =
+    "Demo successful! No booking was sent. Verified hotel contact details must be connected before launch.";
+});
+</script>
+</body>
+</html>
